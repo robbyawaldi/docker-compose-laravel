@@ -60,13 +60,13 @@ services:
       - laravel
     entrypoint: ['composer', '--ignore-platform-reqs']
 
-  npm:
-    image: node:13.7
+  yarn:
+    image: node:12.18.4
     container_name: npm
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
-    entrypoint: ['npm']
+    entrypoint: ['yarn']
 
   artisan:
     build:
